@@ -94,7 +94,7 @@ module.exports = {
 
 
     createOccupations: function(req, res) {
-        user.occupations.push(req.body);
+        user.occupations.push(req.body.occupation);
         return res.status(200).json(user);
     },
 

@@ -44,10 +44,11 @@ app.get('/restaurants/:name', mainCtrl.getRestaurantsName);
 
 
 
+app.put('/user/:name', mainCtrl.updateName);
 
 app.put('/user/location', mainCtrl.updateLocation);
 
-app.put('/user/:name', mainCtrl.updateName);
+
 
 app.post('/hobbies', mainCtrl.createHobbies);
 
