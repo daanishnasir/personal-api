@@ -1,5 +1,7 @@
-module.exports = {
+var skillz = require('../skillz.js');
 
+
+module.exports = {
 
     addHeaders: function(req, res, next) {
 
@@ -15,24 +17,24 @@ module.exports = {
 
         next();
 
-    },
+          },
+
+////
 
     generateID: function(req, res, next) {
-        req.body.id = skills.length + 1;
+        req.body.id = skillz.length + 1;
         console.log(req.body.id);
         next();
     },
 
 
 
+
     verifyUser: function(req, res, next) {
         if (req.params.username === "daanish" && req.params.pin === "1234") {
             next();
-        } else return res.status(401).json({
-            message: "Not Authorized unless your name is daanish and your pin is 1234"
-        });
-    }
-
-
+        } else
+            return res.status(401).json({message: "Not Authorized unless your name is daanish and your pin is 1234"});
+        }
 
 };
